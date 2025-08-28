@@ -54,7 +54,15 @@ class Archivos(db.Model):
 class Celular(db.Model):
     __tablename__ = "celular"  # Nombre de la tabla en la BD
     id = db.Column(db.Integer, primary_key=True)
-    nombre = db.Column(db.String(50), nullable=False)
+    nombre_dispositivo = db.Column(db.String(50), nullable=False)
+    modelo = db.Column(db.String(50), nullable=False)
+    version =  db.Column(db.String(50), nullable=False)
+    cpu =  db.Column(db.String(50), nullable=False)
+    ram =  db.Column(db.String(50), nullable=False)
+    rom =  db.Column(db.String(50), nullable=False)
+    bateria =  db.Column(db.String(50), nullable=False)
+    versionhios =  db.Column(db.String(50), nullable=False)
+    numero_compilacion =  db.Column(db.String(50), nullable=False)
     
 
     # Relación con Reporte
