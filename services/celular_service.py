@@ -3,16 +3,7 @@ from models import db, Celular
 
 from datetime import datetime
 
-  id = db.Column(db.Integer, primary_key=True)
-    nombre_dispositivo = db.Column(db.String(50), nullable=False)
-    modelo = db.Column(db.String(50), nullable=False)
-    version =  db.Column(db.String(50), nullable=False)
-    cpu =  db.Column(db.String(50), nullable=False)
-    ram =  db.Column(db.String(50), nullable=False)
-    rom =  db.Column(db.String(50), nullable=False)
-    bateria =  db.Column(db.String(50), nullable=False)
-    versionhios =  db.Column(db.String(50), nullable=False)
-    numero_compilacion =  db.Column(db.String(50), nullable=False)
+
     
 # Crear un celular
 def crear_archivo(nombre_dispositivo, modelo, version, cpu, ram, rom, bateria, versionhios, numero_compilacion):
