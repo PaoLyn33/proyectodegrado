@@ -2,8 +2,10 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from config import Config  # 👈 importamos la configuración centralizada
 import psycopg2
+from models import db, Usuario, Reporte, Celular  # importa tus modelos
 
-db = SQLAlchemy()
+
+#db = SQLAlchemy()
 
 def create_app():
     app = Flask(__name__)
@@ -32,4 +34,8 @@ def get_db_connection():
 # Ejecutar la app
 if __name__ == '__main__':
     app = create_app()
+    with app.app_context():
+        db.create_all()  # 👈 crea las tablas
     app.run(debug=True)
+
+
